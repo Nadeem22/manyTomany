@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>WELCOME TO HOME PAGE</h1>
+	<div class="container text-center">
+		<div><h1>Welcome to inventory app</h1></div>
+		<div class="p-2">
+			<a class="h2" th:href="@{/users}">List User</a>
+		</div>
+		<div class="p-2">
+			<a class="h2" th:href="@{/users/new}">Create User</a>
+		</div>
+	</div>
+</body>
+</html>

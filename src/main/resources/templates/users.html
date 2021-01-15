@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+		<div><h1>User List</h1></div>
+		<div>
+			<h3><a th:href="@{/users/new}">Create User</a></h3>
+		</div>
+		<table>
+			<thead>
+				<tr>
+				<th>ID</th>
+				<th>EMAIL</th>
+				<th>ROLES</th>
+				</tr>
+			</thead>
+			<tbody>
+				<th:block th:each="user:${listUsers}">
+					<tr>
+						<td>[[${user.id}]]</td>
+						<td>[[${user.email}]]</td>
+						<td>[[${user.roles}]]</td>
+					</tr>
+				</th:block>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
